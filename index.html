@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponto De Vista</title>
+    <title>Meu Blog Pessoal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* cor de fundo cinza claro */
-            color: #000; /* cor do texto preto */
+            background-color: #f2f2f2;
+            color: #333;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         header {
-            background-color: #333; /* cor de fundo preto para o cabeçalho */
-            color: #fff; /* cor do texto branco */
-            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
-        h1 {
-            margin-top: 0;
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .sidebar {
+            float: left;
+            width: 30%;
+            background: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            float: left;
+            width: 70%;
+            background: #fff;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .post {
-            background-color: #fff; /* cor de fundo branco para as postagens */
-            border: 1px solid #ccc;
-            padding: 20px;
             margin-bottom: 20px;
         }
         .post h2 {
@@ -34,13 +62,12 @@
             line-height: 1.6;
         }
         footer {
-            background-color: #333; /* cor de fundo preto para o rodapé */
-            color: #fff; /* cor do texto branco */
-            padding: 10px;
+            clear: both;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -49,14 +76,36 @@
         <h1>Meu Blog Pessoal</h1>
     </header>
 
-    <div class="post">
-        <h2>Título do Primeiro Post</h2>
-        <p>Texto do seu primeiro post. Aqui você pode escrever sobre o que quiser.</p>
-    </div>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#posts">Posts</a>
+        <a href="#contact">Contato</a>
+    </nav>
 
-    <div class="post">
-        <h2>Título do Segundo Post</h2>
-        <p>Texto do seu segundo post. Compartilhe suas ideias, pensamentos ou experiências.</p>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Sobre Mim</h3>
+            <p>Sou uma pessoa interessada em compartilhar meus pensamentos e experiências através deste blog.</p>
+            <h3>Links</h3>
+            <ul>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <section class="post">
+                <h2>Título do Primeiro Post</h2>
+                <p>Texto do seu primeiro post. Aqui você pode escrever sobre o que quiser.</p>
+            </section>
+
+            <section class="post">
+                <h2>Título do Segundo Post</h2>
+                <p>Texto do seu segundo post. Compartilhe suas ideias, pensamentos ou experiências.</p>
+            </section>
+        </div>
     </div>
 
     <footer>
